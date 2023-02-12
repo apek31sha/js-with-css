@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myhunger.com</title>
+  
+</head>
+
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+       
+    }
+    body{
+        height:100%;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url("9.jpeg") ;
+        background-size: cover;
+       
+    }
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border:2px solid black;
+        margin:20px;
+        padding: 20px;
+        background-image: url("burger.webp");
+        
+    }
+    form input{
+        margin:10px;
+        padding:5px;
+        border-radius:  2px;
+       
+        
+    }
+    label{
+        color: azure;
+    }
+
+</style>
+<link rel="icon" href="ice.jpg">
+<body>
+  <a href="#" onClick="var greet=('Welcome for visting');alert(greet)";>hi!</a>
+<form >
+  <label for="text"> Username:<input type="text" id="text"><input type="submit" value="submit" onclick="check('text')" ></label> 
+ 
+  <label for="number"> Burger_quantity_ordered :<input type="number" id ="number">  <input type="submit" value="submit" onclick="check1('number')" ></label>
+  <label for="number1"> Drink_quantity_ordered :<input type="number" id ="number1">  <input type="submit" value="submit" onclick="check2('number1')" ></label>
+  
+
+  <h4 onMouseover="alert('Be sure to get your shopping done today.');">Ends </h4> 
+
+</form>
+</body>
+</html>
+<script>
+// name checking
+     function check(text){
+        var letters=/^[A-Za-z]+$/;
+        if(document.getElementById("text").value.match(letters)){
+            alert(" nice name")
+     
+        }
+        else if(document.getElementById("text").value==""){
+            alert("name required")
+        }
+        else{
+            alert("name does not have number or any special character")
+        }
+    }
+
+// price of burger
+    function  check1(number){
+        if(document.getElementById("number").value==""){
+            alert("Number required");
+        }
+        else if(document.getElementById("number").value){
+             const one_burger=100
+             let burger_price=(document.getElementById("number").value*one_burger)
+             alert("total price of burger "+burger_price +"rs")
+       }
+    }
+//price of  soft drink
+    function  check2(number1){
+        if(document.getElementById("number1").value==""){
+            alert("Number required");
+        }
+        else if(document.getElementById("number1").value){
+             const one_softdrink=50
+             let soft_drink_price=(document.getElementById("number1").value*one_softdrink)
+             alert("total price of soft_drink "+ soft_drink_price+"rs")
+       }
+    }
+</script>
